@@ -21,8 +21,12 @@ body {
 	font-size: 1.5rem;
 }
 
-main {
+main,
+.opinion-header {
 	display: flex;
+}
+
+main {
 	align-items: center;
 	flex-direction: column;
 	width: 100%;
@@ -31,10 +35,11 @@ main {
 
 .container {
 	max-width: 300px;
-    padding: 4em 0;
-    text-align: center;
-	background-image: url(../images/bg-pattern-top-mobile.svg), url(../images/bg-pattern-bottom-mobile.svg);
-    background-position: top -110px left 140px, bottom right;
+	padding: 4em 0;
+	text-align: center;
+	background-image: url(../images/bg-pattern-top-mobile.svg),
+		url(../images/bg-pattern-bottom-mobile.svg);
+	background-position: top -110px left 140px, bottom right;
 	background-repeat: no-repeat, no-repeat;
 }
 
@@ -57,7 +62,7 @@ main {
 
 .stars-cont {
 	margin-top: 2.4em;
-    padding: 1em 0;
+	padding: 1em 0;
 	background-color: var(--light-grayish-magenta);
 	border-radius: 8px;
 }
@@ -80,10 +85,6 @@ main {
 
 .opinions {
 	margin-top: 3.5em;
-}
-
-.opinion-header {
-	display: flex;
 }
 
 .opinion-box {
@@ -115,8 +116,8 @@ main {
 }
 
 .verified-buyer {
-	color: var(--soft-pink);
 	margin-top: 0.2em;
+	color: var(--soft-pink);
 }
 
 .opinion-content {
@@ -135,31 +136,31 @@ main {
 }
 
 @media (min-width: 1240px) {
-	main {
+	header,
+	main,
+	.opinions,
+	.stars-cont {
 		display: flex;
+	}
+
+	main {
 		justify-content: center;
 	}
 
-    .container {
-        max-width: 1200px;
-        padding: 4em 0;
-        text-align: center;
-        background-image: url(../images/bg-pattern-top-desktop.svg),
-            url(../images/bg-pattern-bottom-desktop.svg);
-        background-position: top left, bottom -80px right 0px;
-        background-repeat: no-repeat, no-repeat;
-    }
+	.container {
+		max-width: 1200px;
+		padding: 4em 0;
+		background-image: url(../images/bg-pattern-top-desktop.svg),
+			url(../images/bg-pattern-bottom-desktop.svg);
+		background-position: top left, bottom -80px right 0px;
+		background-repeat: no-repeat, no-repeat;
+	}
 
 	.container {
 		padding: 7em;
-		/* background-color: aqua; */
 		-webkit-box-shadow: 1px 3px 28px -14px rgba(66, 68, 90, 1);
 		-moz-box-shadow: 1px 3px 28px -14px rgba(66, 68, 90, 1);
 		box-shadow: 1px 3px 28px -14px rgba(66, 68, 90, 1);
-	}
-
-	header {
-		display: flex;
 	}
 
 	.header-text-body {
@@ -186,7 +187,6 @@ main {
 	}
 
 	.stars-cont {
-		display: flex;
 		margin-top: 1em;
 		padding: 1em 2em;
 	}
@@ -195,23 +195,24 @@ main {
 		margin: 0;
 	}
 
-	.star-two {
+	.star-two,
+	.star-three,
+	.two,
+	.three {
 		position: relative;
+	}
+
+	.star-two {
 		left: 55px;
 	}
 
 	.star-three {
-		position: relative;
 		left: 110px;
 	}
 
 	.stars-text {
 		margin-left: 2em;
 		line-height: 19px;
-	}
-
-	.opinions {
-		display: flex;
 	}
 
 	.opinion-box {
@@ -224,12 +225,10 @@ main {
 	}
 
 	.two {
-		position: relative;
 		top: 20px;
 	}
 
 	.three {
-		position: relative;
 		top: 40px;
 	}
 }
